@@ -1,7 +1,12 @@
 import time
 from pathlib import Path
 
-
+def read_file_raw(input_path):
+    with open(Path(input_path), 'r') as f:
+        string = f.read()
+    
+    return string
+    
 def read_file(input_path):
     with open(Path(input_path), 'r') as f:
         string = f.read().splitlines()
